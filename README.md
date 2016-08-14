@@ -3,7 +3,7 @@ This project allows you to easily create responsive xaml code using directly ext
 
 Code Sample:
 
-<Grid X:XS.AdaptiveGrid="True">
+<G rid X:XS.AdaptiveGrid="True">
 	<Grid.RowDefinitions>
 		<RowDefinition Height="Auto" />
 		<RowDefinition Height="Auto" />
@@ -33,5 +33,5 @@ Code Sample:
 			 X:XS.Margin="2" X:XS.Row="3"/>
 	<TextBlock Margin="10" Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Right"
 			 X:XS.Margin="2" X:XS.Row="4" X:XS.HorizontalAlignment="Center" Text="Gender"/>
-</Grid>
+</G rid>
 
