@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>AdaptiveProperties</id>
+        <version>2.0.0.0</version>
+        <title>XAML Adaptive Properties</title>
+        <authors>Rudy Spano</authors>
+        <owners>Rudy Spano</owners>
+        <projectUrl>http://rudy.spano.free.fr/?p=456</projectUrl>
+        <iconUrl>http://rudy.spano.free.fr/Other/AdaptiveProperties.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This package allows you to easily create responsive xaml code using directly extra properties like X:XS.Column="1", X:XS.Row="3",X:XS.Margin="5,2,8,10", ...
+      This package exists for UWP Win10, Universal App 8.1 and WPF!
+
+Xaml sample:
+
+&lt;Grid&gt;
+ &lt;Grid.ColumnDefinitions&gt;
+  &lt;ColumnDefinition/&gt;
+  &lt;ColumnDefinition/&gt;
+ &lt;/Grid.ColumnDefinitions&gt;
+
+ &lt;X:XS.RowDefinitions&gt;
+  &lt;RowDefinition Height="Auto" /&gt;
+  &lt;RowDefinition Height="Auto" /&gt;
+ &lt;/X:XS.RowDefinitions&gt;
+ &lt;X:XS.ColumnDefinitions&gt;
+  &lt;ColumnDefinition/&gt;
+ &lt;/X:XS.ColumnDefinitions&gt;
+ 
+ &lt;TextBlock Margin="10" Grid.Row="0" Grid.Column="0"
+      X:XS.Margin="2" Text="FirstName"/&gt;
+ &lt;TextBox Margin="10" Grid.Row="0" Grid.Column="1" 
+    X:XS.Margin="2" X:XS.Row="1" X:XS.Column="0"/&gt;
+&lt;/Grid&gt;
+     
+See documentation for more information.</description>
+        <releaseNotes>Unique package for all</releaseNotes>
+        <copyright>Copyright 2016</copyright>
+        <tags>Responsive Adaptive Xaml  WPF UWP Windows Store</tags>
+    </metadata>
+    <files>
+        <file src="content\NuGet.exe" target="content\NuGet.exe" />
+        <file src="AdaptiveProperties.UWP\bin\Release\AdaptiveProperties.UWP.dll" target="lib\.NETCore50\AdaptiveProperties.UWP.dll" />
+        <file src="AdaptiveProperties.WPF\bin\Release\AdaptiveProperties.WPF.dll" target="lib\net452\AdaptiveProperties.WPF.dll" />
+        <file src="AdaptiveProperties.WindowsStore\bin\Release\AdaptiveProperties.WindowsStore.dll" target="lib\portable-win81+wpa81\AdaptiveProperties.WindowsStore.dll" />
+    </files>
+</package>

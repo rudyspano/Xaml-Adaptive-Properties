@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="AdaptiveProperties_Demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:X="using:AdaptiveProperties"
+    mc:Ignorable="d">
+
+    <Grid  X:XS.AdaptiveGrid="True">
+        <!--Here, RowDefinitions and ColumnDefinitions are the same for all modes -->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" Source="/Assets/WallpBig.jpg"
+               X:XS.Source="/Assets/WallpSmall.jpg"/>
+
+
+        <Border Background="BlueViolet" Grid.ColumnSpan="2" Height="100"
+                                                      X:XS.Height="50"/>
+        <Grid Grid.Row="1" Margin="20" X:XS.VerticalAlignment="Center" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <X:XS.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </X:XS.RowDefinitions>
+            <X:XS.ColumnDefinitions>
+                <ColumnDefinition/>
+            </X:XS.ColumnDefinitions>
+
+            <TextBlock Margin="10" Grid.Row="0" Grid.Column="0"
+                       X:XS.Margin="2" Text="FirstName"/>
+            <TextBox Margin="10" Grid.Row="0" Grid.Column="1" 
+                     X:XS.Margin="2" X:XS.Row="1"/>
+            <TextBlock Margin="10" Grid.Row="1" Grid.Column="0" 
+                     X:XS.Margin="2"  X:XS.Row="2"
+                   Text="Last Name"/>
+            <TextBox Margin="10" Grid.Row="1" Grid.Column="1" 
+                     X:XS.Margin="2" X:XS.Row="3"/>
+            <TextBlock Margin="10" Grid.Row="2" Grid.Column="0" 
+                     X:XS.Margin="2" X:XS.Row="4" X:XS.HorizontalAlignment="Center" Text="Gender"/>
+            <ComboBox Margin="10" Grid.Row="2" Grid.Column="1"  Width="200" HorizontalAlignment="Left"
+                      X:XS.Margin="2" X:XS.Row="5" X:XS.HorizontalAlignment="Center">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="Male"/>
+                    <ComboBoxItem Content="Female"/>
+                </ComboBox.Items>
+            </ComboBox>
+
+        </Grid>
+        <Image Grid.Row="1"  Grid.Column="1" Width="200"
+               X:XS.Visibility="Collapsed"
+               Source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2000px-User_icon_2.svg.png" />
+
+
+    </Grid>
+    
+</Page>
