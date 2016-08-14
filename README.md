@@ -13,7 +13,7 @@ Code Sample:
 		<ColumnDefinition Width="200"/>
 		<ColumnDefinition/>
 	</Grid.ColumnDefinitions>
-	<!-- Properties Definition for XS Mode -->
+
 	<X:XS.RowDefinitions>
 		<RowDefinition Height="Auto" />
 		<RowDefinition Height="Auto" />
